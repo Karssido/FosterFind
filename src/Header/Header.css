@@ -1,0 +1,141 @@
+.header {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    background: #f4e3b2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 3.5vw;
+    /* font-family: 'Brush Script MT', cursive; */
+    font-family: 'Bauer Bodoni Condensed', serif;
+    color: #74070e;
+    margin: 0 30px;
+    width: 250px;
+    text-align: center;
+}
+
+.header-tabs ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-tabs li {
+    cursor: pointer;
+    color:#74070e;
+    padding: 5px 15px;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-tabs li:hover,
+.header-tabs li:hover a {
+    background: #74070e;
+    color: #f4e3b2;
+}
+
+.header-tabs .active,
+.header-tabs .active a {
+    background: #74070e;
+    color: #f4e3b2;
+    padding: 5px 15px;
+}
+
+.header-tabs a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dt {
+    margin: 0 30px;
+    font-family: 'Hagrid', sans-serif;
+    font-weight: 700;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #74070e;
+}
+
+.dt p {
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+}
+
+.dt p.wish {
+    font-size: small;
+    margin-top: 5px;
+}
+
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #74070e;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 4vw;
+    }
+
+    .header-tabs ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .header-tabs ul.show {
+        display: flex;
+    }
+
+    .header-tabs li {
+        padding: 5px 10px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: auto;
+        padding: 5px;
+    }
+
+    .header h1 {
+        font-size: 5vw;
+    }
+
+    .header-tabs ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-tabs li {
+        padding: 5px;
+    }
+
+    .dt {
+        text-align: center;
+    }
+}
