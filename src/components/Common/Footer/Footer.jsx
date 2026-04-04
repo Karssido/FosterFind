@@ -8,14 +8,14 @@ export default function Footer() {
   return (
     <div className='footer'>
       <ul>
-        <li><FontAwesomeIcon icon={faFacebook} className="icon" /></li>
+        {/* <li><FontAwesomeIcon icon={faFacebook} className="icon" /></li> */}
         <li><FontAwesomeIcon icon={faTwitter} className="icon" /></li>
         <li><FontAwesomeIcon icon={faLinkedin} className="icon" /></li>        
         <li>
           <button
             className="icon-button"
             aria-label="Show phone number"
-            onClick={() => alert('Need Help? Call us at +91 98765 43210')}
+            onClick={() => alert('Need Help? Call us at +91 9911264235')}
           >
             <FontAwesomeIcon icon={faPhone} className="icon" />
           </button>
