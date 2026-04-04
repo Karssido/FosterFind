@@ -1,14 +1,13 @@
 import React from 'react';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
   return (
     <div className='footer'>
       <ul>
-        {/* <li><FontAwesomeIcon icon={faFacebook} className="icon" /></li> */}
         <li><FontAwesomeIcon icon={faTwitter} className="icon" /></li>
         <li><FontAwesomeIcon icon={faLinkedin} className="icon" /></li>        
         <li>
