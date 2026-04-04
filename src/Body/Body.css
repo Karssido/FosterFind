@@ -1,54 +1,146 @@
-.body {
+.homepage {
+    position: relative;
     width: 100%;
-    background-color: var(--primary-color);
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.hero {
-    width: 100%;
-    height: 65vh;
-    background: #f4e3b2;
+    justify-content: flex-start;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.home-header {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 10px 20px;
+}
+
+.home-header h1 {
+    font-size: 3.5vw;
+    font-family: 'Bauer Bodoni Condensed', serif;
+    color: #fff3e0;
+    text-align: center;
+}
+
+.home-header-tabs ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.home-header-tabs li {
+    cursor: pointer;
+    color: #fff3e0;
+    padding: 5px 15px;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-header-tabs li:hover,
+.home-header-tabs li:hover a {
+    background: #00897b;
+    color: #fff3e0;
+}
+
+.home-header-tabs .active,
+.home-header-tabs .active a {
+    background: #00897b;
+    color: #fff3e0;
+    padding: 5px 15px;
+}
+
+.home-header-tabs a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.home-dt {
+    margin: 0 30px;
+    font-family: 'Hagrid', sans-serif;
+    font-weight: 700;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff3e0;
 }
 
-.hero-title {
+.home-dt p {
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+}
+
+.home-dt p.home-wish {
+    font-size: small;
+    margin-top: 5px;
+}
+
+.home-hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff3e0;
+}
+
+.home-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    /* padding: 40px 20px; */
+    text-align: center;
+}
+
+.home-body-title {
     font-size: 3rem;
-    /* font-family: 'Brush Script MT', cursive; */
     font-family: 'Hagrid', sans-serif;
     margin-bottom: 20px;
-    color: #74070e;
+    color: #fff3e0;
 }
 
-.hero-subtitle {
+.home-body-subtitle {
     font-size: 1.5rem;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-family: 'Hagrid', sans-serif;
     margin-bottom: 30px;
     padding: 0 30px;
-    color: #74070e;
+    color: #fff3e0;
 }
 
-.hero hr {
-    width: 70%;
-    margin: 10px auto;
-    border: 1px solid #74070e;
+.home-body hr{
+  border-top: 1px dotted;
+  width: 70%;
 }
 
-.cta-button {
+
+.home-cta-button {
     padding: 5px 15px;
     font-size: 1.2rem;
-    color: #74070e;
+    color: #fff3e0;
     background-color: var(--highlight-color);
     border: none;
     border-radius: 2px;
@@ -57,115 +149,67 @@
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: #74070e;
+.home-cta-button:hover {
+    background-color: #00897b;
     color: #f4e3b2;
 }
 
-.body-info {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    margin-top: 40px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.body-title {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    font-family: var(--font-family-secondary);
-    margin-bottom: 20px;
-}
-
-.body-description {
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-/* Media query for devices with a max width of 1024px (large tablets and small laptops) */
-@media (max-width: 1024px) {
-    .hero {
-        height: auto;
-        padding: 20px 10px;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.3rem;
-    }
-
-    .cta-button {
-        font-size: 1.1rem;
-    }
-
-    .body-title {
-        font-size: 2.2rem;
-    }
-
-    .body-description {
-        font-size: 1.1rem;
-    }
-}
-
-/* Media query for devices with a max width of 768px (tablets and smaller) */
+/* Responsive styles */
 @media (max-width: 768px) {
-    .hero {
-        height: auto;
-        padding: 20px 10px;
+    .home-header {
+        flex-direction: column;
+        padding: 10px;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .home-header h1 {
+        font-size: 4vw;
     }
 
-    .hero-subtitle {
+    .home-header-tabs ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .home-header-tabs ul.show {
+        display: flex;
+    }
+
+    .home-hamburger-menu {
+        display: block;
+    }
+
+    .home-body-title {
+        font-size: 2rem;
+    }
+
+    .home-body-subtitle {
         font-size: 1.2rem;
     }
 
-    .cta-button {
-        font-size: 1rem;
-    }
-
-    .body-title {
-        font-size: 2rem;
-    }
-
-    .body-description {
+    .home-cta-button {
         font-size: 1rem;
     }
 }
 
-/* Media query for devices with a max width of 480px (mobile phones) */
 @media (max-width: 480px) {
-    .hero {
-        height: auto;
-        padding: 10px 5px;
+    .home-header h1 {
+        font-size: 5vw;
     }
 
-    .hero-title {
-        font-size: 2rem;
+    .home-dt {
+        text-align: center;
     }
 
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        font-size: 0.9rem;
-    }
-
-    .body-title {
+    .home-body-title {
         font-size: 1.5rem;
     }
 
-    .body-description {
+    .home-body-subtitle {
+        font-size: 1rem;
+    }
+
+    .home-cta-button {
         font-size: 0.9rem;
     }
 }

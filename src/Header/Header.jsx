@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { NavLink } from 'react-router-dom';
 import './Header.css';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
     const locale = 'en';
@@ -28,12 +28,11 @@ export default function Header() {
             <h1>FosterFind</h1>
             <nav className='header-tabs'>
                 <ul>
-                    <li><NavLink to="/" exact activeClassName="active">Home</NavLink></li>
-                    <li><NavLink to="/about-us" activeClassName="active">About Us</NavLink></li>
-                    <li><NavLink to="/find-orphanages" activeClassName="active">Orphanages</NavLink></li>
-                    <li><NavLink to="/find-hospitals" activeClassName="active">Hospitals</NavLink></li>
-                    <li><NavLink to="/find-oldAgeHomes" activeClassName="active">Old Age Homes</NavLink></li>
-
+                    <li><NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
+                    <li><NavLink to="/about-us" className={({ isActive }) => isActive ? 'active' : ''}>About Us</NavLink></li>
+                    <li><NavLink to="/find-orphanages" className={({ isActive }) => isActive ? 'active' : ''}>Orphanages</NavLink></li>
+                    <li><NavLink to="/find-hospitals" className={({ isActive }) => isActive ? 'active' : ''}>Hospitals</NavLink></li>
+                    <li><NavLink to="/find-oldAgeHomes" className={({ isActive }) => isActive ? 'active' : ''}>Old Age Homes</NavLink></li>
                 </ul>
             </nav>
             <div className='dt'>
@@ -46,4 +45,3 @@ export default function Header() {
         </div>
     );
 }
-

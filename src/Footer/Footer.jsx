@@ -10,8 +10,16 @@ export default function Footer() {
       <ul>
         <li><FontAwesomeIcon icon={faFacebook} className="icon" /></li>
         <li><FontAwesomeIcon icon={faTwitter} className="icon" /></li>
-        <li><FontAwesomeIcon icon={faLinkedin} className="icon" /></li>
-        <li><FontAwesomeIcon icon={faPhone} className="icon" /></li>
+        <li><FontAwesomeIcon icon={faLinkedin} className="icon" /></li>        
+        <li>
+          <button
+            className="icon-button"
+            aria-label="Show phone number"
+            onClick={() => alert('Need Help? Call us at +91 98765 43210')}
+          >
+            <FontAwesomeIcon icon={faPhone} className="icon" />
+          </button>
+        </li>
         <li>
           <a href="https://www.instagram.com/fosterfind?igsh=enBwY2p5MGNnZXVh" className="icon-link" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} className="icon" />

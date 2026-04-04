@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: center;
     background-size: cover;
-    background: #f4e3b2;
+    /* background: #f4e3b2; */
+    background: #fff3e0;
     background-position: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -30,24 +31,38 @@
 }
 
 .footer li:hover {
-    background: #74070e;
-    color: #f4e3b2;
+    /* background: #74070e; */
+    background: #00897b;
+    /* color: #f4e3b2; */
+    color: #fff3e0;
 }
 
 .icon {
     height: 30px;
     width: 20px;
-    color: #74070e;
+    /* color: #74070e; */
+    color: #00897b;
     transition: color 0.3s;
 }
 
 .footer li:hover .icon {
-    color: #f4e3b2;
+    /* color: #f4e3b2; */
+    color: #fff3e0;
 }
 
 .icon-link {
     color: inherit; /* Ensure the link inherits the color of the icon */
     text-decoration: none; /* Remove underline from the link */
+}
+
+.footer .icon-button{
+    background: none;
+    border: none;
+    height: 30px;
+    width: 20px;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
 }
 
 /* Media query for devices with a max width of 768px (tablets and smaller) */
