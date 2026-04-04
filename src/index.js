@@ -29,15 +29,15 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './assets/styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './Layout';
-import Hospital from './Pages/Hospital';
-import Orphanage from './Pages/Orphanage';
-import OldAgeHome from './Pages/OldAgeHome';
-import AboutUs from './Pages/AboutUs';
+import Layout from './components/layout/Layout';
+import Hospital from './pages/Hospital/Hospital';
+import Orphanage from './pages/Orphanage/Orphanage';
+import OldAgeHome from './pages/OldAgeHome/OldAgeHome';
+import AboutUs from './pages/AboutUs/AboutUs';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
