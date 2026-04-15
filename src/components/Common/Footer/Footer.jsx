@@ -8,8 +8,16 @@ export default function Footer() {
   return (
     <div className='footer'>
       <ul>
-        <li><FontAwesomeIcon icon={faTwitter} className="icon" /></li>
-        <li><FontAwesomeIcon icon={faLinkedin} className="icon" /></li>        
+        <li>
+          <a href="https://x.com/GandhiMadh38991" className="icon-link" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTwitter} className="icon" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/madhav-gandhi-38991/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} className="icon" />
+          </a>
+        </li>
         <li>
           <button
             className="icon-button"
