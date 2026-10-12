@@ -1,10 +1,14 @@
 import React from 'react';
-import HospitalContent from './HospitalContent';
+import DirectoryPage from '../../components/DirectoryPage/DirectoryPage';
+import heroImage from '../../assets/images/bg5.jpg';
 
 export default function Hospital() {
   return (
-    <div>
-      < HospitalContent/>
-    </div>
+    <DirectoryPage
+      dataFile="hospitals.json"
+      title="Find Hospitals"
+      subtitle="Search hospitals and healthcare centres across India by state, city or name."
+      heroImage={heroImage}
+    />
   );
 }

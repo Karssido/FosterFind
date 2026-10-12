@@ -39,6 +39,7 @@ export default function Footer() {
           </a>
         </li>
       </ul>
+      <p className="footer-copy">© {new Date().getFullYear()} FosterFind · Where rights meet compassion</p>
     </div>
   );
 }

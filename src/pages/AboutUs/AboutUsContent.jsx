@@ -5,7 +5,7 @@ export default function AboutUsContent() {
   return (
     <div className='about-us'>
       <div className='about-us-info'>
-        <h2 className='about-us-title'>"Where Rights Meet Compassion"</h2>
+        <h2 className='about-us-title'>&ldquo;Where Rights Meet Compassion&rdquo;</h2>
         <p className='about-us-description'>
           <b>FosterFind</b> is a website dedicated to connecting people in need with resources and support. It offers a search-and-find engine for hospitals, orphanages, and old-age homes, making it easy to discover and connect with these establishments nearby.
         </p>

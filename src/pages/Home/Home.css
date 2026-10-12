@@ -1,10 +1,9 @@
 .homepage {
     position: relative;
     width: 100%;
-    min-height: 85vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,95 +13,87 @@
 
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 40, 36, 0.65) 0%, rgba(0, 0, 0, 0.45) 60%, rgba(0, 0, 0, 0.6) 100%);
     z-index: -1;
 }
 
 .home-header {
-    width: 100vw;
-    height: auto;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
-    padding: 10px 20px;
+    gap: 16px;
+    padding: 18px 32px;
 }
 
 .home-header h1 {
-    font-size: 3.5vw;
-    font-family: 'Bauer Bodoni Condensed', serif;
-    color: #fff3e0;
-    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    color: var(--cream);
+    letter-spacing: 0.5px;
 }
 
 .home-header-tabs ul {
     display: flex;
+    gap: 4px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .home-header-tabs li {
-    cursor: pointer;
-    color: #fff3e0;
-    padding: 5px 15px;
-    font-weight: 600;
-    border-radius: 2px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.home-header-tabs li:hover,
-.home-header-tabs li:hover a {
-    background: #00897b;
-    color: #fff3e0;
-}
-
-.home-header-tabs .active,
-.home-header-tabs .active a {
-    background: #00897b;
-    color: #fff3e0;
-    padding: 5px 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--cream);
 }
 
 .home-header-tabs a {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 999px;
     text-decoration: none;
     color: inherit;
+    transition: background-color 0.25s ease;
+}
+
+.home-header-tabs li:hover a {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.home-header-tabs a.active {
+    background: var(--coral);
+    color: var(--white);
 }
 
 .home-dt {
-    margin: 0 30px;
-    font-family: 'Hagrid', sans-serif;
-    font-weight: 700;
-    width: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff3e0;
+    align-items: flex-end;
+    min-width: 190px;
+    color: var(--cream);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: right;
 }
 
 .home-dt p {
     margin: 0;
-    padding: 0;
-    font-size: medium;
 }
 
 .home-dt p.home-wish {
-    font-size: small;
-    margin-top: 5px;
+    font-size: 0.75rem;
+    opacity: 0.85;
 }
 
 .home-hamburger-menu {
     display: none;
     background: none;
     border: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1;
     cursor: pointer;
-    color: #fff3e0;
+    color: var(--cream);
 }
 
 .home-body {
@@ -111,105 +102,90 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: transparent;
-    /* padding: 40px 20px; */
+    padding: 40px 24px 80px;
     text-align: center;
 }
 
 .home-body-title {
-    font-size: 3rem;
-    font-family: 'Hagrid', sans-serif;
-    margin-bottom: 20px;
-    color: #fff3e0;
+    margin: 0 0 8px;
+    font-size: clamp(2.2rem, 6vw, 4.2rem);
+    line-height: 1.1;
+    color: var(--white);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.home-body hr {
+    width: 90px;
+    margin: 18px 0 24px;
+    border: none;
+    border-top: 3px solid var(--coral-light);
+    border-radius: 2px;
 }
 
 .home-body-subtitle {
-    font-size: 1.5rem;
-    font-family: 'Hagrid', sans-serif;
-    margin-bottom: 30px;
-    padding: 0 30px;
-    color: #fff3e0;
+    max-width: 680px;
+    margin: 0 0 32px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--cream);
 }
-
-.home-body hr{
-  border-top: 1px dotted;
-  width: 70%;
-}
-
 
 .home-cta-button {
-    padding: 5px 15px;
-    font-size: 1.2rem;
-    color: #fff3e0;
-    background-color: var(--highlight-color);
+    padding: 14px 34px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--coral);
     border: none;
-    border-radius: 2px;
+    border-radius: 999px;
     cursor: pointer;
-    text-decoration: underline;
-    transition: background-color 0.3s ease;
+    box-shadow: var(--shadow-coral);
+    transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .home-cta-button:hover {
-    background-color: #00897b;
-    color: #f4e3b2;
+    background: var(--coral-dark);
+    transform: translateY(-2px);
 }
 
-/* Responsive styles */
+@media (max-width: 900px) {
+    .home-dt {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .home-header {
-        flex-direction: column;
-        padding: 10px;
+        flex-wrap: wrap;
+        padding: 14px 16px;
     }
 
     .home-header h1 {
-        font-size: 4vw;
-    }
-
-    .home-header-tabs ul {
-        flex-direction: column;
-        align-items: center;
-        display: none;
-    }
-
-    .home-header-tabs ul.show {
-        display: flex;
+        font-size: 1.6rem;
     }
 
     .home-hamburger-menu {
         display: block;
     }
 
-    .home-body-title {
-        font-size: 2rem;
+    .home-header-tabs {
+        order: 3;
+        width: 100%;
     }
 
-    .home-body-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .home-cta-button {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .home-header h1 {
-        font-size: 5vw;
-    }
-
-    .home-dt {
+    .home-header-tabs ul {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
         text-align: center;
+        padding-top: 8px;
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: var(--radius);
     }
 
-    .home-body-title {
-        font-size: 1.5rem;
-    }
-
-    .home-body-subtitle {
-        font-size: 1rem;
-    }
-
-    .home-cta-button {
-        font-size: 0.9rem;
+    .home-header-tabs ul.show {
+        display: flex;
     }
 }

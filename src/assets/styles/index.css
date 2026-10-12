@@ -1,13 +1,56 @@
+:root {
+  --teal: #00897b;
+  --teal-dark: #00695c;
+  --teal-light: #4db6ac;
+  --coral: #e8572a;
+  --coral-dark: #c9441b;
+  --coral-light: #ff8a65;
+  --cream: #fff3e0;
+  --cream-dark: #ffe0b2;
+  --text: #263238;
+  --text-muted: #607d8b;
+  --white: #ffffff;
+  --radius: 14px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 105, 92, 0.18);
+  --shadow-coral: 0 8px 20px rgba(232, 87, 42, 0.35);
+  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--cream);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+:focus-visible {
+  outline: 3px solid var(--teal-light);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
